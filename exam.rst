@@ -49,7 +49,7 @@ The program conversion was to process the code in accordance with the assembly c
 
 
 
-..  image:: Desktop/1.png
+..  image:: /c/Users/Feranmi/Try-o/1.png
     :align: center
     :width: 600
          
@@ -90,7 +90,7 @@ Main Calculation C++ COde
          cout<<"Total Value = "<<total<<endl;
 
 
-..  image:: Desktop/2.png
+..  image:: /c/Users/Feranmi/Try-o/2.png
     :align: center
     :width: 600
     
