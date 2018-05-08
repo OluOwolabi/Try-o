@@ -53,6 +53,41 @@ The program conversion was to process the code in accordance with the assembly c
     :align: center
     :width: 600
          
+ 
+Main Calculation C++ COde
+************************
+
+..  code-block:: text
+         
+         int total=0;
+         string key2;
+         char factor;
+         char key=0;
+         cout<<"Enter Major Tom Path : "<<endl;
+         cin>>key2;
+         int n = key2.length();
+         char value[n+1];
+         strcpy(value, key2.c_str());
+         
+         for (int i=0; i<n; i++){
+               if(value[i]=='+'){
+               factor='+';
+         }else if(value[i]=='-'){
+            factor='-';
+         }else if(isdigit(value[i])){
+	  if(factor=='+'){
+                int z=(int)value[i] - '0';
+                total+=z;
+               factor='0';
+	  }else if(factor=='-'){
+                  int z=value[i] - '0';
+                  total=total-z;
+                  factor='0';
+	  }else{}
+         } else { 
+                  }
+         }
+         cout<<"Total Value = "<<total<<endl;
 
 
 
