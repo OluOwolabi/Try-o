@@ -18,6 +18,7 @@ The program is to be used to count the digits up and down. The code is written i
 For the implementation of the program, the use of array was implemented the code to store integers before execution.
          
 ..  code-block:: text
+
     vector <int> integerToArray(int x){
           vector <int> resultArray;
         while (true){
