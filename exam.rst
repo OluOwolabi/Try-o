@@ -32,4 +32,13 @@ For the implementation of the program, the use of array was implemented the code
 ..  code-block:: text
 
     $ cd /HDrive
+    vector <int> integerToArray(int x){
+          vector <int> resultArray;
+        while (true){
+             resultArray.insert(resultArray.begin(), x%10);
+               x /= 10;
+              if(x == 0)
+       return resultArray;
+    }
+
 
