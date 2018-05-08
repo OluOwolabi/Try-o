@@ -90,5 +90,52 @@ Main Calculation C++ COde
          cout<<"Total Value = "<<total<<endl;
 
 
+..  image:: Desktop/2.png
+    :align: center
+    :width: 600
+    
+    
+The above code is the main operation of the program, the code allows the program to enter only numbers and not letters since the processing are only supposed to be numbers only. The program, just like the Tom program, will request the user to enter the exact path for the Tom then it will execute the total value after the processing is done.
+This is shown in the above diagram, as the displays after each digit processing.
+
+
+The Use
+*******
+
+The program is a conversion program from the Tom program which was implemented in assembly to C++. The program is used to fetch the path of the Tom and then processes the values as shown in the above diagram. The Path of the Tom in this case is +1+5+7-2 and when it is entered to the program, the program will be executing the by processing each path and displaying the results. The below code is a snippet of the fetcher in C++ 
+void printDirectory(File dir, int numTabs) {
+
+..  code-block:: text
+
+	void printDirectory(File dir, int numTabs) {
+  	while (true) {
+   		 File entry =  dir.openNextFile();
+    		if (! entry) {
+      		// no more files
+      		break;
+   	 }
+    for (uint8_t i = 0; i < numTabs; i++) {
+      Serial.print('\t');
+    }
+   	 Serial.print(entry.name());
+         if (entry.isDirectory()) {
+         Serial.println("/");
+          printDirectory(entry, numTabs + 1);
+    }else {
+      // files have sizes, directories do not
+      Serial.print("\t\t");
+      Serial.println(entry.size(), DEC);
+    }
+    entry.close();
+  }
+
+
+ The code fetches the path which has been entered into the system or program , it then display it on the program ready for the processing.
+
+
+Conclusion
+**********
+
+The conversion of  the program to C++ programming language is possible and the results can be displayed with the exactness as the initial Tom program which was in assembly language programming.
 
 
