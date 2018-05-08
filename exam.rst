@@ -16,22 +16,8 @@ Purpose of the Code
 ********************
 The program is to be used to count the digits up and down. The code is written in C++ programming language for its translation from the initial assembly language programming.
 For the implementation of the program, the use of array was implemented the code to store integers before execution.
-
-..  code-block:: text
-  vector <int> integerToArray(int x)
-        {
-           vector <int> resultArray;
-         while (true)
-         {
-          resultArray.insert(resultArray.begin(), x%10);
-         x /= 10;
-         if(x == 0)
-            return resultArray;
-         }
          
 ..  code-block:: text
-
-    $ cd /HDrive
     vector <int> integerToArray(int x){
           vector <int> resultArray;
         while (true){
