@@ -1,8 +1,6 @@
-..  _cs-lab-procedures:
 
 :Author: Olu Owolabi
 
-..  include::   /references.inc
 
 Introduction
 *******************
