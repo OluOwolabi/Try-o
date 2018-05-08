@@ -49,7 +49,7 @@ The program conversion was to process the code in accordance with the assembly c
 
 
 
-..  image:: Try-o/1.png
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/2.png
     :align: center
     :width: 600
          
