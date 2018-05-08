@@ -133,12 +133,12 @@ The code fetches the path which has been entered into the system or program , it
 
 
 
-..  image:: https://github.com/OluOwolabi/Try-o/blob/master/3.JPG
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/3.png
     :align: center
     :width: 600
 
 
-DIagram of the fetch and execute unit.
+Diagram of the fetch and execute unit.
 
 
 
