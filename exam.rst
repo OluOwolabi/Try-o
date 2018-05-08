@@ -1,6 +1,6 @@
 
 :Author: Olu Owolabi
-
+..  include::   /references.inc
 
 Introduction
 *******************
@@ -130,6 +130,16 @@ void printDirectory(File dir, int numTabs) {
 
 
 The code fetches the path which has been entered into the system or program , it then display it on the program ready for the processing.
+
+
+
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/3.png
+    :align: center
+    :width: 600
+
+
+DIagram of the fetch and execute unit.
+
 
 
 Conclusion
