@@ -29,8 +29,8 @@ For the implementation of the program, the use of array was implemented the code
     }
 
 
- The above code snippet is represents the array code for the program. The array lists and stores the integers in the code before it is finally executed through the command line.
-
+ 
+The above code snippet is represents the array code for the program. The array lists and stores the integers in the code before it is finally executed through the command line.
 The program conversion was to process the code in accordance with the assembly code in the Tom program.
 
 
