@@ -133,7 +133,7 @@ The code fetches the path which has been entered into the system or program , it
 
 
 
-..  image:: https://github.com/OluOwolabi/Try-o/blob/master/3.png
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/3.JPG
     :align: center
     :width: 600
 
