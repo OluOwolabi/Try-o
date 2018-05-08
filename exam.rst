@@ -130,7 +130,8 @@ void printDirectory(File dir, int numTabs) {
   }
 
 
- The code fetches the path which has been entered into the system or program , it then display it on the program ready for the processing.
+
+The code fetches the path which has been entered into the system or program , it then display it on the program ready for the processing.
 
 
 Conclusion
