@@ -144,7 +144,7 @@ Diagram of the fetch and execute unit.
 
 
 
-..	code-block:: <!--  -->
+..	code-block:: c
 	
 	
 	#include <bits/stdc++.h>
