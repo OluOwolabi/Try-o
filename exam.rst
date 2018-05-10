@@ -144,119 +144,119 @@ Diagram of the fetch and execute unit.
 
 
 
-..	code-block:: text
+..	code-block:: <!--  -->
 	
 	
-#include <bits/stdc++.h>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include<stdio.h>
-#include<stdlib.h>
-#include <sstream>
+	#include <bits/stdc++.h>
+	#include <string>
+	#include <vector>
+	#include <algorithm>
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include <sstream>
 
 
 
-using namespace std;
+	using namespace std;
 
-struct compute: std::ctype<char> {
+	struct compute: std::ctype<char> {
 
-    compute(): std::ctype<char>(get_table()) {}
+		compute(): std::ctype<char>(get_table()) {}
 
-    static std::ctype_base::mask const* get_table() {
-        static std::vector<std::ctype_base::mask>
-            rc(table_size, std::ctype_base::mask());
+		static std::ctype_base::mask const* get_table() {
+			static std::vector<std::ctype_base::mask>
+				rc(table_size, std::ctype_base::mask());
 
-        rc['/'] = std::ctype_base::space;
-        rc['-'] = std::ctype_base::space;
+			rc['/'] = std::ctype_base::space;
+			rc['-'] = std::ctype_base::space;
 
-        return &rc[0];
-    }
-};
-typedef std::vector< int > ints_t;
+			return &rc[0];
+		}
+	};
+	typedef std::vector< int > ints_t;
 
-struct veryfyDigit
-{
-    int operator()( const char chr ) const
-    {
-        const int result = chr - '0';
-        return result;
-    }
-};
-void calc()
-{
-     int number;
-      ints_t* result;
-    std::ostringstream os;
-    os << number;
-    const std::string& numberStr = os.str();
-    std::transform(
-        numberStr.begin(),
-        numberStr.end(),
-        std::back_inserter( *result ),
-        veryfyDigit() );
-}
-
- void mainCalculation(){
-
-int total=0;
-    string key2;
-    char factor;
-    char key=0;
-    cout<<"Enter Major Tom Path : "<<endl;
-    cin>>key2;
-
-	int n = key2.length();
-
-
-    char value[n+1];
-
-
-    strcpy(value, key2.c_str());
-
-    for (int i=0; i<n; i++){
-
-
-	  if(value[i]=='+'){
-
-	  factor='+';
-
-	  }else
-	   if(value[i]=='-'){
-
-                  factor='-';
-
-	  } else
-            if(isdigit(value[i])){
-	  if(factor=='+'){
-
-                int z=(int)value[i] - '0';
-               total+=z;
-               factor='0';
-	  }else
-
-	  if(factor=='-'){
-                  int z=value[i] - '0';
-                  total=total-z;
-                  factor='0';
-	  }else{}
-
-	  } else { }
-
+	struct veryfyDigit
+	{
+		int operator()( const char chr ) const
+		{
+			const int result = chr - '0';
+			return result;
+		}
+	};
+	void calc()
+	{
+		 int number;
+		  ints_t* result;
+		std::ostringstream os;
+		os << number;
+		const std::string& numberStr = os.str();
+		std::transform(
+			numberStr.begin(),
+			numberStr.end(),
+			std::back_inserter( *result ),
+			veryfyDigit() );
 	}
- cout<<"Total Value = "<<total<<endl;
- //+1+5+7-2
-}
 
-int main()
-{
-    mainCalculation();
-    veryfyDigit();
-   compute();
-    calc();
+	 void mainCalculation(){
 
-    return 0;
-}
+	int total=0;
+		string key2;
+		char factor;
+		char key=0;
+		cout<<"Enter Major Tom Path : "<<endl;
+		cin>>key2;
+
+		int n = key2.length();
+
+
+		char value[n+1];
+
+
+		strcpy(value, key2.c_str());
+
+		for (int i=0; i<n; i++){
+
+
+		  if(value[i]=='+'){
+
+		  factor='+';
+
+		  }else
+		   if(value[i]=='-'){
+
+					  factor='-';
+
+		  } else
+				if(isdigit(value[i])){
+		  if(factor=='+'){
+
+					int z=(int)value[i] - '0';
+				   total+=z;
+				   factor='0';
+		  }else
+
+		  if(factor=='-'){
+					  int z=value[i] - '0';
+					  total=total-z;
+					  factor='0';
+		  }else{}
+
+		  } else { }
+
+		}
+	 cout<<"Total Value = "<<total<<endl;
+	 //+1+5+7-2
+	}
+
+	int main()
+	{
+		mainCalculation();
+		veryfyDigit();
+	   compute();
+		calc();
+
+		return 0;
+	}
 
 
 
