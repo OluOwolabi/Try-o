@@ -45,49 +45,6 @@ The program conversion was to process the code in accordance with the assembly c
     }
 };
 
-
-
-..  image:: https://github.com/OluOwolabi/Try-o/blob/master/1.png
-    :align: center
-    :width: 600
-         
- 
-Main Calculation C++ COde
-************************
-
-..  code-block:: text
-         
-         int total=0;
-         string key2;
-         char factor;
-         char key=0;
-         cout<<"Enter Major Tom Path : "<<endl;
-         cin>>key2;
-         int n = key2.length();
-         char value[n+1];
-         strcpy(value, key2.c_str());
-         
-         for (int i=0; i<n; i++){
-               if(value[i]=='+'){
-               factor='+';
-         }else if(value[i]=='-'){
-            factor='-';
-         }else if(isdigit(value[i])){
-	  if(factor=='+'){
-                int z=(int)value[i] - '0';
-                total+=z;
-               factor='0';
-	  }else if(factor=='-'){
-                  int z=value[i] - '0';
-                  total=total-z;
-                  factor='0';
-	  }else{}
-         } else { 
-                  }
-         }
-         cout<<"Total Value = "<<total<<endl;
-
-
 ..  image:: https://github.com/OluOwolabi/Try-o/blob/master/2.png
     :align: center
     :width: 600
@@ -103,29 +60,118 @@ The Use
 The program is a conversion program from the Tom program which was implemented in assembly to C++. The program is used to fetch the path of the Tom and then processes the values as shown in the above diagram. The Path of the Tom in this case is +1+5+7-2 and when it is entered to the program, the program will be executing the by processing each path and displaying the results. The below code is a snippet of the fetcher in C++ 
 void printDirectory(File dir, int numTabs) {
 
-..  code-block:: text
+..  code-block:: c
+		
+	#include <bits/stdc++.h>
+	#include <string>
+	#include <vector>
+	#include <algorithm>
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include <sstream>
 
-	void printDirectory(File dir, int numTabs) {
-  	while (true) {
-   		 File entry =  dir.openNextFile();
-    		if (! entry) {
-      		// no more files
-      		break;
-   	 }
-    for (uint8_t i = 0; i < numTabs; i++) {
-      Serial.print('\t');
-    }
-   	 Serial.print(entry.name());
-         if (entry.isDirectory()) {
-         Serial.println("/");
-          printDirectory(entry, numTabs + 1);
-    }else {
-      // files have sizes, directories do not
-      Serial.print("\t\t");
-      Serial.println(entry.size(), DEC);
-    }
-    entry.close();
-  }
+
+
+	using namespace std;
+
+	struct compute: std::ctype<char> {
+
+		compute(): std::ctype<char>(get_table()) {}
+
+		static std::ctype_base::mask const* get_table() {
+			static std::vector<std::ctype_base::mask>
+				rc(table_size, std::ctype_base::mask());
+
+			rc['/'] = std::ctype_base::space;
+			rc['-'] = std::ctype_base::space;
+
+			return &rc[0];
+		}
+	};
+	typedef std::vector< int > ints_t;
+
+	struct veryfyDigit
+	{
+		int operator()( const char chr ) const
+		{
+			const int result = chr - '0';
+			return result;
+		}
+	};
+	void calc()
+	{
+		 int number;
+		  ints_t* result;
+		std::ostringstream os;
+		os << number;
+		const std::string& numberStr = os.str();
+		std::transform(
+			numberStr.begin(),
+			numberStr.end(),
+			std::back_inserter( *result ),
+			veryfyDigit() );
+	}
+
+	 void mainCalculation(){
+
+	int total=0;
+		string key2;
+		char factor;
+		char key=0;
+		cout<<"Enter Major Tom Path : "<<endl;
+		cin>>key2;
+
+		int n = key2.length();
+
+
+		char value[n+1];
+
+
+		strcpy(value, key2.c_str());
+
+		for (int i=0; i<n; i++){
+
+
+		  if(value[i]=='+'){
+
+		  factor='+';
+
+		  }else
+		   if(value[i]=='-'){
+
+					  factor='-';
+
+		  } else
+				if(isdigit(value[i])){
+		  if(factor=='+'){
+
+					int z=(int)value[i] - '0';
+				   total+=z;
+				   factor='0';
+		  }else
+
+		  if(factor=='-'){
+					  int z=value[i] - '0';
+					  total=total-z;
+					  factor='0';
+		  }else{}
+
+		  } else { }
+
+		}
+	 cout<<"Total Value = "<<total<<endl;
+	 //+1+5+7-2
+	}
+
+	int main()
+	{
+		mainCalculation();
+		veryfyDigit();
+	   compute();
+		calc();
+
+		return 0;
+	}
 
 
 
@@ -133,7 +179,7 @@ The code fetches the path which has been entered into the system or program , it
 
 
 
-..  image:: https://github.com/OluOwolabi/Try-o/blob/master/3.png
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/Untitled2.png
     :align: center
     :width: 600
 
@@ -141,8 +187,10 @@ The code fetches the path which has been entered into the system or program , it
 Diagram of the fetch and execute unit.
 
 
+Testing of the Code in C++
+************************
 
-
+This a C++ converted version of Major Toms' Code.
 
 ..	code-block:: c
 	
@@ -259,6 +307,13 @@ Diagram of the fetch and execute unit.
 	}
 
 
+
+
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/Untitled.png
+    :align: center
+    :width: 600
+         
+ 
 
 
 
