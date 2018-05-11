@@ -184,7 +184,7 @@ The code fetches the path which has been entered into the system or program , it
     :width: 600
 
 
-Diagram of the fetch and execute unit.
+
 
 
 Testing of the Code in C++
@@ -306,16 +306,18 @@ This a C++ converted version of Major Toms' Code.
 		return 0;
 	}
 
-
-
-
 ..  image:: https://github.com/OluOwolabi/Try-o/blob/master/Untitled.png
     :align: center
     :width: 600
          
  
 
-
+ Fetch, Execute, Decode and Store Unit
+ *************************************
+	..  image:: https://github.com/OluOwolabi/Try-o/blob/master/Untitled3.png
+    :align: center
+    :width: 600
+         
 
 
 	
