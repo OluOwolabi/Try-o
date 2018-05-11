@@ -312,9 +312,11 @@ This a C++ converted version of Major Toms' Code.
          
  
 
- Fetch, Execute, Decode and Store Unit
- *************************************
-	..  image:: https://github.com/OluOwolabi/Try-o/blob/master/Untitled3.png
+ 
+ 
+Fetch, Execute, Decode and Store Unit
+*************************************
+..  image:: https://github.com/OluOwolabi/Try-o/blob/master/Untitled3.png
     :align: center
     :width: 600
          
